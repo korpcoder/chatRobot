@@ -60,8 +60,9 @@ def preprocess():
     logger.info("preprocessing data,data path:{}, save path:{}".format(args.train_path, args.save_path))
 
     # 读取训练数据集
-    with open(args.train_path, 'rb') as f:
-        data = f.read().decode("utf-8")
+    with open(args.train_path, 'r',encoding='utf-8') as f:
+        data = f.read()
+    # print(args.train_path,data)
 
     # 需要区分linux和windows环境下的换行符
     if "\r\n" in data:
