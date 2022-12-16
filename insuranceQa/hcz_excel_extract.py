@@ -19,7 +19,7 @@ def read_excel(path):
             # 参考preprocess里面添加隔断
             question = sheet.cell(i, 2).value.strip() + '\n'
             answer = sheet.cell(i, 3).value.strip() + ('\r\n' if i != mr else '')
-            f.write(str(i)+question)
+            f.write(question)
             f.write(answer)
             count += 1
     print(f'处理{path}共{count}个对话')

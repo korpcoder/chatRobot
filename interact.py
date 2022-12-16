@@ -40,6 +40,7 @@ def set_args():
     parser.add_argument('--log_path', default='data/interact.log', type=str, required=False, help='interact日志存放位置')
     parser.add_argument('--vocab_path', default='vocab/vocab.txt', type=str, required=False, help='选择词库')
     parser.add_argument('--model_path', default='model/epoch40', type=str, required=False, help='对话模型路径')
+    parser.add_argument('--config_path', default='model/epoch40', type=str, required=False, help='对话模型配置路径')
     parser.add_argument('--save_samples_path', default="sample/", type=str, required=False, help="保存聊天记录的文件路径")
     parser.add_argument('--repetition_penalty', default=1.0, type=float, required=False,
                         help="重复惩罚参数，若生成的对话重复性较高，可适当提高该参数")
@@ -119,9 +120,10 @@ def main():
     os.environ["CUDA_VISIBLE_DEVICES"] = args.device
     tokenizer = BertTokenizerFast(vocab_file=args.vocab_path, sep_token="[SEP]", pad_token="[PAD]", cls_token="[CLS]")
     # tokenizer = BertTokenizer(vocab_file=args.voca_path)
-    config = GPT2Config.from_json_file('model\config.json')
+    config = GPT2Config.from_json_file(args.config_path)
     print(args.model_path)
     model = GPT2LMHeadModel.from_pretrained(args.model_path, config=config)
+    logger.info(f'使用模型 {args.model_path} 对应配置 {args.config_path}')
     model = model.to(device)
     model.eval()
     if args.save_samples_path:

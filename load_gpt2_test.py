@@ -14,17 +14,22 @@ from transformers import GPT2Tokenizer, GPT2LMHeadModel, BertTokenizer, GPT2Conf
 # 加载 GPT-2 模型
 config = GPT2Config.from_json_file('model/config.json')
 model = GPT2LMHeadModel.from_pretrained('model/pytorch_model.bin', config=config)
+num_parameters = 0
+parameters = model.parameters()
+for parameter in parameters:
+    num_parameters += parameter.numel()
+print(num_parameters)
 device = 'cuda' if torch.cuda.is_available() else 'cpu'
 print('using device:', device)
 model.eval()
 model.to(device)
 # BertTokenizer
-tokenizer = BertTokenizer.from_pretrained('model/pytorch_model.bin', vocab_file="vocab.txt")
-
-input_text = "肯德基疯狂星期"
-x = tokenizer.tokenize(input_text)
-print(x)
-y = tokenizer.convert_tokens_to_ids(tokenizer.tokenize(input_text))
-print(y)
-generated_text = model.generate(x, max_length=100)
-print(generated_text)
+# tokenizer = BertTokenizer.from_pretrained('model/pytorch_model.bin', vocab_file="vocab.txt")
+#
+# input_text = "肯德基疯狂星期"
+# x = tokenizer.tokenize(input_text)
+# print(x)
+# y = tokenizer.convert_tokens_to_ids(tokenizer.tokenize(input_text))
+# print(y)
+# generated_text = model.generate(x, max_length=100)
+# print(generated_text)
