@@ -1,0 +1,49 @@
+聊天记录2022-12-14 19:58:44.348201:
+user:你好
+chatbot:你好啊！
+user:你是？
+chatbot:我是你粉丝啊！我是路人。
+user:真的吗
+chatbot:是的呢
+user:车险呢？
+chatbot:还没有了
+user:？什么意思
+chatbot:车险也要一段时间，要交多少钱，我们要小车费了
+user:小车费错别字哦
+chatbot:你不说我还不知道
+聊天记录2022-12-14 19:59:45.477098:
+聊天记录2022-12-14 20:00:04.219185:
+聊天记录2022-12-14 20:00:56.058561:
+user:hello
+chatbot:早安
+user:how are you
+chatbot:早啊
+user:早
+chatbot:早，馒头
+user:馒头？
+chatbot:嗯嗯
+user:为什么要吃馒头
+chatbot:因为我不喜欢吃馒头呀
+user:我要吃面条
+chatbot:你不爱我了
+user:？？？
+chatbot:我是你爸爸
+user:我是你爹
+chatbot:你是我儿子
+user:你是我孙子
+chatbot:我是你爸爸
+user:我才是你爸爸
+chatbot:爸爸在为你操碎了心
+user:我是你爷爷
+chatbot:你是我的小仙女么
+聊天记录2022-12-15 17:17:01.354352:
+user:你好
+chatbot:你也好
+user:今晚出来吃饭
+chatbot:嗯嗯好好次饭
+user:去哪里
+chatbot:哪里都可以
+user:吃什么
+chatbot:我都不知道在哪
+user:去台北
+chatbot:为啥，我在台北好不好
