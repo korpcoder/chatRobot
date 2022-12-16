@@ -16,3 +16,5 @@
 2022-12-15 17:17:00,534 - INFO - using device:cpu
 2022-12-16 14:42:19,008 - INFO - using device:cpu
 2022-12-16 14:42:40,503 - INFO - using device:cpu
+2022-12-16 14:44:29,918 - INFO - using device:cpu
+2022-12-16 14:44:30,641 - INFO - 使用模型 model/epoch40/pytorch_model.bin 对应配置 model/epoch40/config.json
