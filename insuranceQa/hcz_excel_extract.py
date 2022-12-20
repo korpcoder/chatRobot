@@ -18,7 +18,8 @@ def read_excel(path):
         for i in range(2, mr + 1):
             # 参考preprocess里面添加隔断
             question = sheet.cell(i, 2).value.strip() + '\n'
-            answer = sheet.cell(i, 3).value.strip() + ('\r\n' if i != mr else '')
+            # 答案去除换行，否则不符合训练需要的格式
+            answer = sheet.cell(i, 3).value.strip().replace('\n', '') + ('\r\n' if i != mr else '')
             f.write(question)
             f.write(answer)
             count += 1
