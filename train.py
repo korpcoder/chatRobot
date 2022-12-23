@@ -381,8 +381,8 @@ def main():
     logger = create_logger(args)
     # 当用户使用GPU,并且GPU可用时
     #args.cuda = torch.cuda.is_available() and not args.no_cuda
-    args.cuda = torch.cuda.is_available()
-    print(f'args no_cuda:{args.no_cuda} cuda {args.cuda}')
+    args.cuda = True
+    print(f'====>args no_cuda:{args.no_cuda} cuda {args.cuda}')
     device = 'cuda:0' if args.cuda else 'cpu'
     args.device = device
     logger.info('using device:{}'.format(device))
