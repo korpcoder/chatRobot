@@ -134,8 +134,8 @@ def load_dataset(logger, args):
     # test
     # input_list_train = input_list_train[:24]
     # input_list_val = input_list_val[:24]
-    print(f'train {len(input_list_train)} {input_list_train}')
-    print(f'valid {len(input_list_val)} {input_list_val}')
+    #print(f'train {len(input_list_train)} {input_list_train}')
+    #print(f'valid {len(input_list_val)} {input_list_val}')
     train_dataset = MyDataset(input_list_train, args.max_len)
     val_dataset = MyDataset(input_list_val, args.max_len)
 
