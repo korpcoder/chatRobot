@@ -4,7 +4,7 @@ import openpyxl
 
 baike_path = r"保险百科-表格.xlsx"
 ketang_path = r"保险小课堂-表格.xlsx"
-train_txt_path = r"../data/train1.txt"
+train_txt_path = r"../data/train-小课堂and百科.txt"
 
 def read_excel(path):
     workbook = openpyxl.load_workbook(path)
