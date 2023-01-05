@@ -134,8 +134,8 @@ def load_dataset(logger, args):
     # test
     # input_list_train = input_list_train[:24]
     # input_list_val = input_list_val[:24]
-    print(f'train {len(input_list_train)} {input_list_train}')
-    print(f'valid {len(input_list_val)} {input_list_val}')
+    #print(f'train {len(input_list_train)} {input_list_train}')
+    #print(f'valid {len(input_list_val)} {input_list_val}')
     train_dataset = MyDataset(input_list_train, args.max_len)
     val_dataset = MyDataset(input_list_val, args.max_len)
 
@@ -380,7 +380,10 @@ def main():
     # 创建日志对象
     logger = create_logger(args)
     # 当用户使用GPU,并且GPU可用时
-    args.cuda = torch.cuda.is_available() and not args.no_cuda
+    #args.cuda = torch.cuda.is_available() and not args.no_cuda
+    args.cuda = True
+    print(f'====>cuda:{torch.cuda.is_available()}')
+    print(f'====>args no_cuda:{args.no_cuda} cuda {args.cuda}')
     device = 'cuda:0' if args.cuda else 'cpu'
     args.device = device
     logger.info('using device:{}'.format(device))
